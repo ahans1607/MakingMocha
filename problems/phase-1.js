@@ -56,7 +56,7 @@ function myRange(min, max, step) {
 //       array.push(i);
 //     }
 
-//   return array
+//   return array or not
 // }
 
 console.log(myRange(1,4))
