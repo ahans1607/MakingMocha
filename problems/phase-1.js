@@ -30,13 +30,37 @@ function isOdd(number) {
       numbers between and inclusive of min and max at step intervals.
 */
 
-function myRange(min, max, step=1) {
+function myRange(min, max, step) {
+  if((typeof min || typeof max || typeof step ) !== "number"){
+    throw ReferenceError
+  } else {
   const array = []
-  for (let i = min; i <= max; i++) {
-    array.push(i);
+  if(step === undefined){
+    step=1
+   for (let i = min; i <= max; i+= step) {
+      array.push(i);
+    }
+  } else {
+    for (let i = min; i <= max; i += step) {
+      array.push(i);
+    }
   }
   return array
 }
+}
+
+// function myRange(min, max, step=1) {
+//   const array = []
+
+//    for (let i = min; i <= max; i+= step) {
+//       array.push(i);
+//     }
+
+//   return array
+// }
+
+console.log(myRange(1,4))
+console.log(myRange(2,10,2))
 /*4. Fizz Buzz Define a function fizzBuzz(max) that takes a number and prints
    every number from 0 to max (not inclusive) that is divisible by either 3 or
    5, but not both.

@@ -8,7 +8,7 @@ describe("isFive(num)", () => {
 
     expect(expected).to.equal(actual)
 
-    
+
   });
   it("should return false if the num is NOT 5 ", () => {
     let expected = true
@@ -36,9 +36,9 @@ describe("isOdd(number)", () => {
 
   it("should throw an error if num is not type of Number", () => {
     let expected = Error
-    let actual = isOdd("things")
+    let actual = function () {isOdd("things")}
 
-    expect(expected).to.be.eql(actual)
+    expect(actual).to.throw(Error)
 
   });
 });
@@ -47,22 +47,27 @@ describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {
       //Arrange
+      let expected = [1, 2, 3, 4];
+      let actual = myRange(1, 4);
 
+      expect(expected).to.eql(actual);
       //Act
 
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      // expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });
   context("if step is provided", () => {
     it("should return the correct array", () => {
-      //Arrange
+      let expected = [2, 4, 6, 8, 10]
+      let actual = myRange(2, 10 , 2)
 
+      expect(expected).to.be.eql(actual)
       //Act
 
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      // expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });
@@ -72,7 +77,7 @@ describe("myRange(min, max, step)", () => {
     //Act
 
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    // expect.fail('Remove this expect.fail and replace it with your test');
 
   });
 });
