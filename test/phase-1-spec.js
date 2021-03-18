@@ -3,54 +3,46 @@ const expect = chai.expect;
 const { isFive, isOdd, myRange, fizzBuzz} = require("../problems/phase-1");
 describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
-    //Arrange
     let expected = true
     let actual = isFive(5)
 
     expect(expected).to.equal(actual)
 
-    //Act
-    //Assert
-    // expect.fail('Remove this expect.fail and replace it with your test');
+    
+  });
+  it("should return false if the num is NOT 5 ", () => {
+    let expected = true
+    let actual = isFive(3)
 
-    //Arrange
-
-    //Act
-
-    //Assert
-    // expect.fail(expected).to.not.equal(actual)
-
+    expect(expected).to.not.equal(actual)
   });
 });
+
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     //Arrange
+    let expected = true;
+    let actual = isOdd(3);
 
-    //Act
-
-    //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
-
+    expect(expected).to.equal(actual)
   });
+
   it("should return false if the num is even", () => {
-    //Arrange
+    let expected = true;
+    let actual = isOdd(4);
 
-    //Act
-
-    //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
-
+    expect(expected).to.not.equal(actual)
   });
+
   it("should throw an error if num is not type of Number", () => {
-    //Arrange
+    let expected = Error
+    let actual = isOdd("things")
 
-    //Act
-
-    //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    expect(expected).to.be.eql(actual)
 
   });
 });
+
 describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {

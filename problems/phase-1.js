@@ -4,8 +4,11 @@
 function isFive(num) {
  if (num === 5) {
    return true;
+ } else {
+   return false
  }
 }
+
 
 /*2. Is Odd Write a function isOdd that takes in a number as an argument and
    returns true if the number is odd and returns false otherwise.
@@ -13,8 +16,13 @@ function isFive(num) {
 function isOdd(number) {
   if (typeof number !== 'number'){
     throw Error('some error')
+  } else {
+    if(number % 2 !== 0){
+      return true
+    } else {
+      return false
+    }
   }
-  return (number % 2 === 0);
 }
 
 /*3. Array  of the Range Write a function myRange(min, max, step) that takes in
