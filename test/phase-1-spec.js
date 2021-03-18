@@ -51,10 +51,6 @@ describe("myRange(min, max, step)", () => {
       let actual = myRange(1, 4);
 
       expect(expected).to.eql(actual);
-      //Act
-
-      // Assert
-      // expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });
@@ -64,20 +60,12 @@ describe("myRange(min, max, step)", () => {
       let actual = myRange(2, 10 , 2)
 
       expect(expected).to.be.eql(actual)
-      //Act
-
-      // Assert
-      // expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });
   it("should throw an error if num is not type of Number", () => {
-    //Arrange
-
-    //Act
-
-    //Assert
-    // expect.fail('Remove this expect.fail and replace it with your test');
+    let actual = function (){ myRange("hats")}
+    expect(actual).to.throw(ReferenceError)
 
   });
 });
